@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  font-size: 18px;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+/* header */
+header {
+  display: flex;
+  margin-top: 6rem;
+}
+.heading,
+.intro {
+  width: 50%;
+}
+.heading h1 {
+  font-family: 'PT Serif', serif;
+  font-size: 2rem;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.intro h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: 439px;
+}
+.intro p {
+  line-height: 27px;
+  width: 439px;
+  margin-top: 1rem;
+}
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 32.33%);
+  place-content: center;
+  gap: 1em;
+  margin-top: 6rem;
+}
+.people {
+  /* background: rgb(61, 111, 139); */
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  display: flex;
+  width: 100%;
+}
+.image img {
+  width: 75%;
+}
+.image p {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+.down h2 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.upper-people:nth-child(even) {
+  margin-top: 6rem;
+}
+.lower-people:nth-child(odd) {
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 786px) {
+  main {
+    grid-template-columns: repeat(2, 43%);
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading,
+  .intro {
+    width: 90%;
+  }
+  .intro {
+    align-items: stretch;
+    margin-top: 2rem;
+  }
+  .intro p,
+  .intro h2 {
+    width: 100%;
+  }
+  .upper-people:nth-child(even) {
+    margin-top: 2rem;
+  }
+}
